@@ -1,0 +1,135 @@
+/*Importing a custom font*/
+@import url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+
+/*nav bar */
+nav {
+	   font-family: 'Nunito', sans-serif;
+}
+
+
+/*main body styling*/
+body {
+background-image: linear-gradient(#e99220, #442f07);
+/* background-image: url("https://lonewriter.neocities.org/images/website-bg.png"); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+ 	background-color: #13092D;
+ 	color: #D7D7D7;
+        hideUsername: 1;
+}
+
+a {	
+/*color: #d633c4;*/
+color: #ecd9a5;
+text-decoration:none;
+}
+a:visited {
+	/*color: purple;*/
+color:orange;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*H2 is used for the username and "statuses" heading*/
+h2 {
+/*color: #ED64F5;*/
+color: #ecd9a5;
+text-align: center;
+}
+
+.status-username {
+text-align:center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+.profile-picture {
+    max-width: 115px;
+}
+
+header {
+text-align:center;
+}
+
+header {
+background-color: #000000;
+padding:1rem;
+border-radius: 15px;
+}
+
+.status {
+  background: #000000;
+  padding: 15px;
+  margin-bottom: 15px;
+border: 1px none purple;
+border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.status-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* makes the imgs and status pop up when they are hovered over */
+
+.status:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 20px var(--kawaii-shadow),
+    inset 0 0 0 1px var(--kawaii-pink);
+
+  &::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+img:hover {
+  transform: translateY(-3px) scale(1.01);
+
+  &::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Makes it looks like it's typing */
+
+.status-content::after {
+  content: "_";
+  display: inline-block;
+  color: var(--cyber-primary);
+  animation: blink 1s step-end infinite;
+}
+
+.email {
+display: none;
+}
+
+ul { list-style-type: "✦ "; }
